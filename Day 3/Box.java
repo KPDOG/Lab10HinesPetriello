@@ -10,13 +10,13 @@ public class Box
         p2 = new Point(x2, y2);
     }
     public void draw(Graphics g) {
-        g.drawRect(p1.getX(), p1.getY(), p2.getX(), p2.getX());
-        g.drawRect(p1.getX()+50,p1.getY()+50,p2.getX(),p2.getX());
+        g.drawRect(p1.getX(), p1.getY(), p2.getX(), p2.getX());// draw back face
+        g.drawRect(p1.getX()+50,p1.getY()+50,p2.getX(),p2.getX());//draw face
+        
         g.drawLine(p1.getX(), p1.getY(),p1.getX()+50,p1.getY()+50);
         g.drawLine(p1.getX(), p1.getY()+p2.getX(), p1.getX()+50,p1.getY()+50+p2.getX());
         g.drawLine(p1.getX()+p2.getX(),p1.getY(), p1.getX()+50+ p2.getX(),p1.getY()+50);
-        g.drawLine(p1.getX()+p2.getX(),p1.getY()+p2.getX(),
-        p1.getX()+ 50 + p2.getX(), p1.getY() + 50 + p2.getX());
+        g.drawLine(p1.getX()+p2.getX(),p1.getY()+p2.getX(), p1.getX()+ 50 + p2.getX(), p1.getY() + 50 + p2.getX());//connections
       
     }
 }
